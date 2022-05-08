@@ -28,7 +28,7 @@ class ActividadesController extends Controller
         //VALIDACIÓN
         $this->validate($request,[
             'nombre' => 'required',
-            'descripcion' => 'required|min:3|max:30'
+            'descripcion' => 'required|min:3|max:300'
         ]);
        
         $actividad = new Actividade;
@@ -54,7 +54,7 @@ class ActividadesController extends Controller
         //VALIDACIÓN
         $this->validate($request,[
             'nombre' => 'required',
-            'descripcion' => 'required|min:3|max:30'      
+            'descripcion' => 'required|min:3|max:300'      
         ]);
 
         $actividad->nombre = $request->get('nombre');

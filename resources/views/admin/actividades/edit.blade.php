@@ -40,8 +40,8 @@
 						              	<label>Estado de la Actividad</label>
 						              	<select name="estado" id="estado" class="form-control">
 						              		<option value="">Seleccione el estado de la Actividad</option> 		              		
-															<option value=1 {{ old('estado') == 1 ? 'selected' : '' }}>PENDIENTE</option>
-															<option value=2 {{ old('estado') == 2 ? 'selected' : '' }}>FINALIZADA</option>											 		
+															<option value=1 {{ old('estado',$actividad->estado) == 1 ? 'selected' : '' }}>PENDIENTE</option>
+															<option value=2 {{ old('estado',$actividad->estado) == 2 ? 'selected' : '' }}>FINALIZADA</option>											 		
 						              	</select>
 						              	{!! $errors->first('estado','<span class="help-block">:message</span>') !!}
 		              				</div>
